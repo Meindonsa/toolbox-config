@@ -12,8 +12,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class SwaggerConfig {
-    @Autowired
-    private ApiConfig apiConfig;
+    @Autowired private ApiConfig apiConfig;
 
     @Bean
     public OpenAPI api() {

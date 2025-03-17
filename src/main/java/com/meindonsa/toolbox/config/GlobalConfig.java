@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 public class GlobalConfig {
 
     @Bean
-    public RestTemplate restClient(){
+    public RestTemplate restClient() {
         return new RestTemplate();
     }
 }

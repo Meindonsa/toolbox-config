@@ -1,6 +1,7 @@
 package com.meindonsa.toolbox.view;
 
 import jakarta.validation.constraints.NotBlank;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,8 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 public class FcmRequest {
 
-    @NotBlank
-    private String title;
+    @NotBlank private String title;
     private String message;
 
     private List<String> targetTokens;

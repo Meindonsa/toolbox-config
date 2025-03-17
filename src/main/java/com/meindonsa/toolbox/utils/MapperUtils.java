@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.introspect.VisibilityChecker;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 
@@ -26,23 +27,7 @@ public class MapperUtils {
         objectMapper.setVisibility(
                 VisibilityChecker.Std.defaultInstance()
                         .withFieldVisibility(JsonAutoDetect.Visibility.ANY));
-        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT)
-                .setPropertyCondition(ctx -> {
-                    Object source = ctx.getSource();
-                    if (source == null) {
-                        return true;
-                    }
-                    String className = source.getClass().getName();
-                    if (className.contains("$Proxy") || className.contains("$$") || className.contains("HibernateProxy")) {
-                        return false;
-                    }
-                    try {
-                        source.getClass().getDeclaredFields();
-                        return true;
-                    } catch (Exception e) {
-                        return false;
-                    }
-                });
+        modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
     }
 
     private MapperUtils() {}
@@ -76,9 +61,9 @@ public class MapperUtils {
         return null;
     }
 
-    //public static <C> C objectFromString(String data, Class<C> clazz) {
+    // public static <C> C objectFromString(String data, Class<C> clazz) {
     //    return new Gson().fromJson(data, clazz);
-    //}
+    // }
 
     public static String objectAsString(Object o) {
         try {

@@ -1,10 +1,10 @@
 package com.meindonsa.toolbox.utils;
 
 import com.meindonsa.toolbox.exception.FunctionalException;
+
 import org.springframework.util.StreamUtils;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -15,6 +15,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Base64;
+
+import javax.imageio.ImageIO;
 
 public class FileHelper {
 
@@ -96,21 +98,21 @@ public class FileHelper {
     }
 
     public static void mergePDF(String mergedFileName, String... files) throws IOException {
-//        PDFMergerUtility mergeUtility = new PDFMergerUtility();
-//        mergeUtility.setDestinationFileName(mergedFileName);
-//        for (String file : files) {
-//            mergeUtility.addSource(new File(file));
-//        }
-//        mergeUtility.mergeDocuments(MemoryUsageSetting.setupTempFileOnly());
+        //        PDFMergerUtility mergeUtility = new PDFMergerUtility();
+        //        mergeUtility.setDestinationFileName(mergedFileName);
+        //        for (String file : files) {
+        //            mergeUtility.addSource(new File(file));
+        //        }
+        //        mergeUtility.mergeDocuments(MemoryUsageSetting.setupTempFileOnly());
     }
 
     public static void mergePDF(String mergedFileName, File... files) throws IOException {
-//        PDFMergerUtility mergeUtility = new PDFMergerUtility();
-//        mergeUtility.setDestinationFileName(mergedFileName);
-//        for (File file : files) {
-//            mergeUtility.addSource(file);
-//        }
-//        mergeUtility.mergeDocuments(MemoryUsageSetting.setupTempFileOnly());
+        //        PDFMergerUtility mergeUtility = new PDFMergerUtility();
+        //        mergeUtility.setDestinationFileName(mergedFileName);
+        //        for (File file : files) {
+        //            mergeUtility.addSource(file);
+        //        }
+        //        mergeUtility.mergeDocuments(MemoryUsageSetting.setupTempFileOnly());
     }
 
     public static void deletePhysicalDocument(String path) {

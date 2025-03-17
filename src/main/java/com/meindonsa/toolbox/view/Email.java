@@ -1,7 +1,9 @@
 package com.meindonsa.toolbox.view;
 
 import com.meindonsa.toolbox.utils.Functions;
+
 import jakarta.validation.constraints.NotBlank;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -19,8 +21,7 @@ import java.util.Map;
 @AllArgsConstructor
 public class Email {
 
-    @NotBlank
-    private String to;
+    @NotBlank private String to;
     private String from;
 
     @NotBlank private String subject;
@@ -28,8 +29,7 @@ public class Email {
     private List<Image> images;
     private List<File> attachments;
 
-    @NotBlank
-    private String type;
+    @NotBlank private String type;
 
     private Map<String, Object> infos;
 
