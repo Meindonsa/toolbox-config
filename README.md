@@ -1,9 +1,5 @@
 # TOOLBOX CONFIG MODULE
 
-- alerting : Email, Push Notification, SMS
-
-- app-server : App runner
-
 ## Build
 
 `mvn clean install -DskipTests -T1C`

@@ -51,10 +51,20 @@ public class Functions {
         return name.toLowerCase().trim().replace(" ", "_");
     }
 
+    public static boolean isNullOrEmpty(String string) {
+        return string == null || string.trim().isEmpty();
+    }
+
+    public static boolean isNullOrEmpty(List<?> lists) {
+        return lists == null || lists.isEmpty();
+    }
+
+    @Deprecated(since = "v0.0.3")
     public static boolean isInvalidString(String string) {
         return string == null || string.trim().isEmpty();
     }
 
+    @Deprecated(since = "v0.0.3")
     public static boolean isInvalidList(List<?> lists) {
         return lists == null || lists.isEmpty();
     }
