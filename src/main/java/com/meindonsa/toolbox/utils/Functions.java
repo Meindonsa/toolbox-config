@@ -81,6 +81,14 @@ public class Functions {
         return !endDate.isAfter(startDate);
     }
 
+    public static String handelKey(String key) {
+        return Functions.isNullOrEmpty(key) ? null : key.trim().toLowerCase();
+    }
+
+    public static String handelUpperCaseKey(String key) {
+        return Functions.isNullOrEmpty(key) ? null : key.trim().toUpperCase();
+    }
+
     public static boolean hasInvalidString(String... strings) {
         if (strings == null) {
             return true;
