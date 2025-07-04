@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.introspect.VisibilityChecker;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import org.modelmapper.Conditions;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 
@@ -28,6 +29,10 @@ public class MapperUtils {
                 VisibilityChecker.Std.defaultInstance()
                         .withFieldVisibility(JsonAutoDetect.Visibility.ANY));
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+        modelMapper
+                .getConfiguration()
+                .setPropertyCondition(Conditions.isNotNull())
+                .setMatchingStrategy(MatchingStrategies.STRICT);
     }
 
     private MapperUtils() {}
