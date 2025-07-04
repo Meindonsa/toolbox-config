@@ -6,7 +6,7 @@
 
     <groupId>com.meindonsa</groupId>
     <artifactId>toolbox-config</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <packaging>jar</packaging>
     <url>https://maven.pkg.github.com/Meindonsa/toolbox-config</url>
     <name>toolbox-config</name>
