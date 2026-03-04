@@ -1,7 +1,7 @@
 package com.meindonsa.toolbox.config;
 
-import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.Components;
+import io.swagger.v3.oas.models.info.Info;
 
 import lombok.Getter;
 
