@@ -62,7 +62,6 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
                 HttpStatus.NOT_ACCEPTABLE);
     }
 
-    @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(
             MethodArgumentNotValidException ex,
             HttpHeaders headers,
