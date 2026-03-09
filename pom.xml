@@ -6,7 +6,7 @@
 
     <groupId>com.meindonsa</groupId>
     <artifactId>toolbox-config</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
     <url>https://maven.pkg.github.com/Meindonsa/toolbox-config</url>
     <name>toolbox-config</name>
@@ -16,7 +16,7 @@
         <java.version>17</java.version>
         <lombok.version>1.18.36</lombok.version>
         <jakarta.version>4.0.0</jakarta.version>
-        <swagger.version>2.3.0</swagger.version>
+        <swagger.version>2.8.6</swagger.version>
         <modelmapper.version>3.2.2</modelmapper.version>
         <spring-boot.version>3.5.11</spring-boot.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
