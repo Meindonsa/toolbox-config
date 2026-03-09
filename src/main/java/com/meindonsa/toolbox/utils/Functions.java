@@ -13,6 +13,7 @@ import java.util.UUID;
 
 public class Functions {
     private Functions() {}
+
     private static final String BASE32_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";
 
     public static String generateUniqueIdentifier(int size) {
